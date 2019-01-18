@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block body%}
+<form method="post">
+{%csrf_token%}
+
+{{form.as_p}}
+<p>Do you have children?</p>
+<input type="text" name="children" placeholder="yes/no" class="form-control">
+
+
+<h4 align="center" >{{error}}</h4>
+<button align="center" type="submit" class="btn btn-success">Book</button>
+
+
+</form>
+<style>
+h4 {color:red;}
+</style>
+
+
+{%endblock%}

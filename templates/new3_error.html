@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block body%}
+<form method="post">
+{%csrf_token%}
+
+{{form.as_p}}
+
+
+
+<h4 align="center" >{{error}}</h4>
+<button align="center" type="submit" class="btn btn-success">Book</button>
+
+
+</form>
+<style>
+h4 {color:red;}
+</style>
+
+
+{%endblock%}
